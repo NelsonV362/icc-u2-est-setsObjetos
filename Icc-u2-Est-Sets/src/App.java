@@ -1,4 +1,6 @@
 import java.util.*;
+import controllers.*;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
@@ -6,7 +8,7 @@ public class App {
         Sets c2 = new Sets("Luis", "Perez", "111111111");
         Sets c3 = new Sets("Pedro", "Gonzales", "123456789");
         Sets c4 = new Sets("Ana", "Perez", "987654321");
-        Sets c5 = new Sets("Pedro", "Lopez", "123456789"); 
+        Sets c5 = new Sets("Pedro", "Lopez", "123456789");
 
         Set<Sets> hashSet = new HashSet<>();
         hashSet.add(c1);
@@ -43,5 +45,14 @@ public class App {
         for (Sets c : treeSet) {
             System.out.println(c);
         }
+
+        System.out.println("\n--- Análisis de arrays e isogramas ---");
+        Ejercicios.analizarArraysYPalabras();
+
+        System.out.println("\n--- Análisis comparativo de textos ---");
+        String texto1 = "¡Hola! La programación en Java es muy divertida, sobre todo cuando se entienden los conceptos.";
+        String texto2 = "Java es divertido. Aprender programación puede ser un reto, pero también muy gratificante.";
+        Ejercicios.compararTextos(texto1, texto2);
     }
 }
+
